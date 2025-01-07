@@ -144,7 +144,7 @@ Attempt 4: Status: completed, Progress: 100.0%, Elapsed Time: 45.67 seconds
 
 ### Server Behavior
 
-- Simulates video translation with a configurable random delay (1–3 minutes).
+- Simulates video translation with a configurable random delay.
 - Responds with:
   - `progress`: Job progress (0–100%).
   - `result`: Job status (`pending`, `completed`, or `error`).
