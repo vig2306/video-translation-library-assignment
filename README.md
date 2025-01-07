@@ -17,8 +17,8 @@ The library:
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/yourusername/video_translation_library.git
-cd video_translation_library
+git clone [https://github.com/yourusername/video_translation_library.git](https://github.com/vig2306/video-translation-library-assignment)
+cd video-translation-library-assignment
 ```
 
 ### Prerequisites
