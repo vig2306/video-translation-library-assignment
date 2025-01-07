@@ -131,7 +131,7 @@ Attempt 4: Status: completed, Progress: 100.0%, Elapsed Time: 45.67 seconds
   - The interval doubles after each polling attempt.
   - Example: 5s → 10s → 20s (capped by `max_interval`).
 
-#### Later Stages (Progress ≥ 70%)
+#### Later Stages (Progress ≥ 60%)
 - **Exponential Decay**:
   - The interval decreases as progress approaches 100%.
 
