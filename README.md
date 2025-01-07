@@ -43,17 +43,13 @@ The polling strategy dynamically adjusts intervals based on the **progress** rep
 2. **Exponential Decay**:
    - For progress ≥ 60%, the interval decreases smoothly as progress approaches 100%.
    - Formula:
-     \[
-     \text{interval} = \max(\text{min\_interval}, \text{initial\_frequent\_interval} \times e^{-k \cdot (100 - \text{progress})})
-     \]
+      interval = max(min_interval, initial_frequent_interval × e^(-k × (100 - progress)))
      - \( k \): Decay factor to control how quickly the interval reduces.
      - This ensures more frequent polling as the job nears completion.
 
 3. **Jitter**:
    - A random factor is added to intervals to avoid synchronized requests:
-     \[
-     \text{next\_interval} = \text{interval} + \text{jitter}
-     \]
+next_interval = interval + jitter
 
 ---
 
@@ -138,14 +134,10 @@ Attempt 4: Status: completed, Progress: 100.0%, Elapsed Time: 45.67 seconds
 #### Later Stages (Progress ≥ 70%)
 - **Exponential Decay**:
   - The interval decreases as progress approaches 100%.
-  - Formula:
-    \[
-    \text{interval} = \max(\text{min\_interval}, \text{initial\_frequent\_interval} \times e^{-k \cdot (100 - \text{progress})})
-    \]
+
 
 #### Jitter
 - Randomness is added to intervals:
-  - \( \text{jitter} = \text{random.uniform}(0, \text{interval} / 2) \)
   - Helps avoid synchronized hits from multiple clients.
 
 ---
